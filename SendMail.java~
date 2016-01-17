@@ -130,7 +130,7 @@ public class SendMail {
 
 					BodyPart body = new MimeBodyPart();
 
-					// freemarker stuff.
+
 					
 					br=new BufferedReader(new InputStreamReader(SendMail.class.getResourceAsStream(filePath)));
 					cfg=new Configuration();
@@ -173,7 +173,7 @@ public class SendMail {
 				message.setFrom(new InternetAddress("abc@gmail.com"));
 				message.addRecipients(Message.RecipientType.TO,cc); 										
 				message.addRecipients(Message.RecipientType.CC,InternetAddress.parse("def@gmail.com"));
-				//message.addRecipients(Message.RecipientType.CC,InternetAddress.parse(b.getEmail()));
+
 
 
 				message.setSubject("Help Nepal");

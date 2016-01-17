@@ -130,7 +130,7 @@ public class SendMail {
 
 					BodyPart body = new MimeBodyPart();
 
-					// freemarker stuff.
+
 					
 					br=new BufferedReader(new InputStreamReader(SendMail.class.getResourceAsStream(filePath)));
 					cfg=new Configuration();
@@ -201,8 +201,8 @@ public class SendMail {
 						      
 				
 				  // Part two is attachment
-		         body = new MimeBodyPart();
-		         // String filename = "C:/Users/DELL/Pictures/img/lumbini.jpg";
+		               body = new MimeBodyPart();
+
 				
 		         String filename = attachFiles+"/"+b.getFilename();
 
