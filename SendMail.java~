@@ -171,8 +171,8 @@ public class SendMail {
 				Message message = new MimeMessage(session);
 
 				message.setFrom(new InternetAddress("abc@gmail.com"));
-				message.addRecipients(Message.RecipientType.TO,cc); 										
-				message.addRecipients(Message.RecipientType.CC,InternetAddress.parse("def@gmail.com"));
+				message.addRecipients(Message.RecipientType.TO,cc) cc);										
+				message.addRecipients(Message.RecipientType.CC,InternetAddress.parse("abc@gmail.com"));
 				//message.addRecipients(Message.RecipientType.CC,InternetAddress.parse(b.getEmail()));
 
 
