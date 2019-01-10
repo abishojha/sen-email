@@ -1,3 +1,0 @@
-INDEX VERSION 1.126
-F:\gmail\AccessManagement\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1259340108.index
-\AccessManagement\src
