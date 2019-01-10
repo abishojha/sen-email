@@ -35,12 +35,7 @@ import freemarker.template.Template;
 
 public class SendMail {
 	
-	String image="http://upload/images/";
-	String audio="http://upload/audios/";
-	String video="http://upload/videos/";
-	String links=null;
-	String files="/upload/";
-	String attachFiles=null;
+	
 
 	private Configuration cfg;
 	private BufferedReader br;
