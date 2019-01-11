@@ -6,6 +6,7 @@ public class Vendor {
 	private String vendor;
 	private String vendorPurpose;
 	private String status;
+	
 	public int getId() {
 		return id;
 	}
@@ -30,11 +31,13 @@ public class Vendor {
 	public void setStatus(String status) {
 		this.status = status;
 	}
+	
 	@Override
 	public String toString() {
-		return "Branch [id=" + id + ", vendor=" + vendor + ", vendorPurpose=" + vendorPurpose + ", status=" + status
+		return "Vendor [id=" + id + ", vendor=" + vendor + ", vendorPurpose=" + vendorPurpose + ", status=" + status
 				+ "]";
 	}
+	
 	
 	
 	

@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %><html>
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+       
         <title>Remind Us</title>
 
          <!-- Bootstrap CSS CDN -->
@@ -96,21 +98,68 @@
 						   
 						  </div>
 						  
+						  <br>
+						  <br>
+						  <br>
+						  
+					
+					  
 						  
 
                  </div> 
+                 
+                 <div>
+                 	  <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+						        <thead>
+						            <tr>
+						                                      <th>Vendor Name</th>
+						                                      <th>Purpose of AMC</th>
+						                                      <th>Status</th>
+						                                      
+						            </tr>
+						        </thead>
+					       <tbody>
+					                           	 <c:forEach var="test" items="${vendors}">
+								                      <tr>
+								
+							                        	
+							                           	<td align="center">'${test.vendor}'</td>
+							                           	<td align="center">${test.vendorPurpose}</td>
+							                           	<td align="center">${test.status}</td>
+							                           	
+							                           	
+							                           
+								                    	</tr>
+							                       	</c:forEach>
+							                    </tbody>
+ </table>
+                 </div>
                  
            </div>
         </div>
 
 		<script src="bootstrap/js/jquery-1.10.2.js"></script>
   	 	<script src="bootstrap/js/bootstrap.min.js"></script>
+  	 	
+  	 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
+
+
+
+
+<!--   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ -->  <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
 
      <script type="text/javascript">
              $(document).ready(function () {
-                 $('#sidebarCollapse').on('click', function () {
-                     $('#sidebar').toggleClass('active');
-                 });
+            	 
+            	 alert("done");
+            	 
+                 $('#example').dataTable();
+
+            	 
+                 
              });
              
            

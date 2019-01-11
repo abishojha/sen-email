@@ -15,9 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.doa.beans.Access;
 import com.doa.beans.Vendor;
-import com.doa.beans.UserAccess;
 import com.doa.dao.FetchDataDAO;
 
 
@@ -28,10 +26,12 @@ public class LoginController {
 	@RequestMapping(value="/logout", method=RequestMethod.GET)  
     public String logoutPage(HttpServletRequest request, HttpServletResponse response) {  
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();  
-        System.out.println(auth.getName());
+        System.out.println("Admin user"+auth.getName());
+        
         Cookie[] cookies = request.getCookies();
         cookies[0].setMaxAge(0);
         response.addCookie(cookies[0]);
+        
         if (auth != null){      
            new SecurityContextLogoutHandler().logout(request, response, auth);  
         }  
@@ -116,7 +116,7 @@ public class LoginController {
 	    
 			List<Vendor> listvendors= ftd.fetchVendor();
 
-			System.out.println("LIST OF VENDORS "+ listvendors);
+			System.out.println("LIST OF VENDORS... "+ listvendors);
 
 			mv.addObject("ROLE", "admin");
 			mv.addObject("vendors", listvendors);
