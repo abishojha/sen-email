@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+							http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+							http://www.springframework.org/schema/context 
+							http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />
+	
+	<bean name="/login" class="com.amc.controllers.LoginController" />			
+    <bean name="/route" class="com.amc.controllers.LoginController" />
+	<bean name="/**" class="com.amc.controllers.LoginController" />	
+	<bean name="/logout" class="com.amc.controllers.LoginController" />	
+	<bean name="/insertVendorNames" class="com.amc.controllers.SadminController" />	
+	<bean name="/insertAmcDetails" class="com.amc.controllers.SadminController" />	
+   	<bean name="/getVendorDetail" class="com.amc.controllers.SadminController" />	
+   	<bean name="/addAmcDetailpage" class="com.amc.controllers.SadminController" />	
+   	<bean name="/addBeforeMonth" class="com.amc.controllers.SadminController" />
+  	<bean name="/updateAmcDetails" class="com.amc.controllers.SadminController" />
+  		
+    <bean name="/addUsers" class="com.amc.controllers.LoginController" />
+    <bean name="/insertUserLogin" class="com.amc.controllers.LoginController" />
+    <bean name="/updateUserLogin" class="com.amc.controllers.LoginController" />
+    <bean name="/deleteUserLogin" class="com.amc.controllers.LoginController" />	   
+    	   
+    	   
+      	   
+      
+  
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="./pages/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	
+	
+</beans>
